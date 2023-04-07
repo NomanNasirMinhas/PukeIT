@@ -1,3 +1,5 @@
+mod sql_injection;
+use reqwest;
 use clap::Parser;
 use std::path::Path;
 use pelite::{FileMap, Result};
@@ -17,5 +19,5 @@ fn main()
 {
     let args = Args::parse();
     println!("Scanning URL {}", args.url);
-
+    sql_injection::do_throttled_request(args.url.as_str());
 }
