@@ -1,7 +1,9 @@
 [package]
 name = "PukeIT"
-version = "0.1.0"
+description = "A Web Application Security Scanner written in Rust language."
+version = "0.0.1"
 edition = "2021"
+authors = ["Noman Nasir Minhas"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
