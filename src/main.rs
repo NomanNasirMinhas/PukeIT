@@ -1,22 +1,21 @@
 use clap::Parser;
+use std::path::Path;
+use pelite::{FileMap, Result};
+use pelite::pe64::{Pe, PeFile};
 
-/// Rust-Based Reverse Engineering Tool
+/// Rust-Based Web Application Security Tester
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 struct Args {
-    /// Binary to Reverse Engineer
+    /// URL of the web application to test
     #[arg(short, long)]
-    binary: String,
+    url: String,
 
-    // /// Number of times to greet
-    // #[arg(short, long, default_value_t = 1)]
-    // count: u8,
 }
 
-fn main() {
+fn main()
+{
     let args = Args::parse();
-
-
-        println!("Hello {}!", args.binary)
+    println!("Scanning URL {}", args.url);
 
 }
